@@ -21,3 +21,12 @@ function connexion() {
         }, 2000);
     }
 }
+
+class Utilisateur {
+    constructor(nom, motDePasse) {
+        this.nom = nom;
+        this.motDePasse = motDePasse;
+    }
+}
+
+const utilisateur = new(nom.value, mdp.value);

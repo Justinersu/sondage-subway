@@ -30,35 +30,39 @@ class Question {
         this.options = options;
     }
     afficherTitre() {
-        return `Choix de ${this.titre}`;
+        h2.innerHTML = ' ';
+        h2.appendChild(document.createTextNode(`Choix de ${this.titre}`));
     }
 }
 class ChoixMultiples extends Question {
     constructor(titre, options) {
-        super(titre, options, afficherTitre());
-        this.ChoixMultiples = true;
+        super(titre, options);
+        this.choixMultiples = true;
     }
 }
 
-//Fonction de fermeture qui affiche le titre de chaque questions
-/*function afficherTitre(titre) {
-    h2.innerHTML = ' ';
-    let titreAAfficher = document.createTextNode('Choix de ' + titre);
-    function ajouterTitre() {
-        h2.appendChild(titreAAfficher);
-    }
-    ajouterTitre();
-}*/
+//Instancier la classe
+const questionPains = new Question('pains', pains);
+const questionProteines = new Question('proteines', proteines);
+const questionFromages = new Question('fromages', fromages);
+const questionLegumes = new ChoixMultiples('legumes', legumes);
+const questionSauces = new ChoixMultiples('sauces', sauces);
 
 //Fonction normale qui ajouter les enfants du form
 function afficherQuestion(element) {
-    for (const choix of element) {
+    for (const choix of element.options) {
         const label = document.createElement('label');
-        label.setAttribute('for', choix);
         const input = document.createElement('input');
-        input.setAttribute('type', 'checkbox');
-        input.setAttribute('id', choix);
         let titreChoix = document.createTextNode(choix);
+        label.setAttribute('for', choix);
+        input.setAttribute('id', choix);
+        //Defini le type d'input selon si c'est un choix multiple
+        if (element.choixMultiples) {
+            input.setAttribute('type', 'checkbox');
+        } else {
+            input.setAttribute('type', 'radio');
+            input.setAttribute('name', 'choix')
+        }
         label.appendChild(input);
         label.appendChild(titreChoix);
         form.appendChild(label);
@@ -72,20 +76,20 @@ function prochaineQuestion() {
     }
     //Determine la prochaine question selon la question actuelle
     if (questionActuelle === 0) {
-        afficherQuestion(proteines);
-        //afficherTitre('protéines');
+        afficherQuestion(questionProteines);
+        questionProteines.afficherTitre();
         questionActuelle = 1;
     } else if (questionActuelle === 1) {
-        afficherQuestion(fromages);
-        //afficherTitre('fromages');
+        afficherQuestion(questionFromages);
+        questionFromages.afficherTitre();
         questionActuelle = 2;
     } else if (questionActuelle === 2) {
-        afficherQuestion(legumes);
-        //afficherTitre('légumes');
+        afficherQuestion(questionLegumes);
+        questionLegumes.afficherTitre();
         questionActuelle = 3;
     } else if (questionActuelle === 3) {
-        afficherQuestion(sauces);
-        //afficherTitre('sauces');
+        afficherQuestion(questionSauces);
+        questionSauces.afficherTitre();
         questionActuelle = 4;
     } else if (questionActuelle === 4) {
         window.open('./page4.html', '_self');
@@ -93,8 +97,8 @@ function prochaineQuestion() {
 };
 
 //Appel des fonctions afficherTitre et afficherQuestion
-/*afficherTitre('pains');*/
-afficherQuestion(pains);
+questionPains.afficherTitre();
+afficherQuestion(questionPains);
 
 //Fonction qui appelle la fonction prochaineQuestion lorsque le bouton est clique
 const action = prochaineQuestion;

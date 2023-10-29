@@ -61,7 +61,7 @@ function afficherQuestion(element) {
             input.setAttribute('type', 'checkbox');
         } else {
             input.setAttribute('type', 'radio');
-            input.setAttribute('name', 'choix')
+            input.setAttribute('name', 'choix');
         }
         label.appendChild(input);
         label.appendChild(titreChoix);

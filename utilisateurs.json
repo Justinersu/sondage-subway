@@ -1,11 +1,10 @@
 {
     "utilisateurs": [
         {"login": "randomizedraptor", 
-        "password": "cacamoisi2727", 
+        "password": "imbeingheldhostage", 
         "nom": "Mouhajer", 
         "prenom": "Ihab"},
-        {"login": 
-        "goofball", 
+        {"login": "goofball", 
         "password": "ilovemusic",
         "nom": "Rousseau",
         "prenom": "Justine"}

@@ -6,7 +6,7 @@ function retour() {
 //Fonction qui s'execute une seule fois dans la vie du programme
 (function () {
     alert('Ce site n\'utilise pas vos données personnelles');
-})();    
+})();
 
 //Tableaux des questions
 const pains = ['Italien', 'Multigrains', 'Fines herbes et fromage'];

@@ -1,0 +1,27 @@
+[
+    {
+        "question": "pains",
+        "reponse": "Italien"
+    },
+    {
+        "question": "proteines",
+        "reponse": "Thon"
+    },
+    {
+        "question": "fromages",
+        "reponse": "Cheddar"
+    },
+    {
+        "question": "legumes",
+        "reponse": [
+            "Laitue",
+            "Épinards",
+            "Concombres",
+            "Poivrons verts"
+        ]
+    },
+    {
+        "question": "sauces",
+        "reponse": "Chipotle sud-ouest"
+    }
+]

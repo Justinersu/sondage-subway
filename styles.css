@@ -124,6 +124,24 @@ button:hover {
     margin-top: 5px;
 }
 
+.utilisateur {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    text-align: center;
+}
+
+.profile_pic img {
+    width: 50px;
+}
+
+.utilisateur div {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    margin-right: 0.5rem;
+}
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }

@@ -1,12 +1,16 @@
 {
-    "utilisateurs": [
-        {"login": "randomizedraptor", 
-        "password": "imbeingheldhostage", 
-        "nom": "Mouhajer", 
-        "prenom": "Ihab"},
-        {"login": "goofball", 
-        "password": "ilovemusic",
-        "nom": "Rousseau",
-        "prenom": "Justine"}
-    ]
+  "utilisateurs": [
+    {
+      "login": "randomizedraptor",
+      "password": "imbeingheldhostage",
+      "nom": "Mouhajer",
+      "prenom": "Ihab"
+    },
+    {
+      "login": "goofball",
+      "password": "ilovemusic",
+      "nom": "Rousseau",
+      "prenom": "Justine"
+    }
+  ]
 }

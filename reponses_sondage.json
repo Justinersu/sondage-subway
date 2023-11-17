@@ -1,27 +1,22 @@
-[
+{
+  "reponse1": [
+    { "question": "pains", "reponse": "Italien" },
+    { "question": "proteines", "reponse": "Thon" },
+    { "question": "fromages", "reponse": "Cheddar" },
     {
-        "question": "pains",
-        "reponse": "Italien"
+      "question": "legumes",
+      "reponse": ["Laitue", "Épinards", "Concombres", "Poivrons verts"]
     },
+    { "question": "sauces", "reponse": "Chipotle sud-ouest" }
+  ],
+  "reponse2": [
+    { "question": "pains", "reponse": "Fines herbes et fromage" },
+    { "question": "proteines", "reponse": "Poulet" },
+    { "question": "fromages", "reponse": "Habanero Jack" },
+    { "question": "legumes", "reponse": ["Laitue", "Épinards", "Concombres"] },
     {
-        "question": "proteines",
-        "reponse": "Thon"
-    },
-    {
-        "question": "fromages",
-        "reponse": "Cheddar"
-    },
-    {
-        "question": "legumes",
-        "reponse": [
-            "Laitue",
-            "Épinards",
-            "Concombres",
-            "Poivrons verts"
-        ]
-    },
-    {
-        "question": "sauces",
-        "reponse": "Chipotle sud-ouest"
+      "question": "sauces",
+      "reponse": ["Chipotle sud-ouest", "Siracha crémeuse"]
     }
-]
+  ]
+}

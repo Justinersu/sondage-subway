@@ -9,11 +9,9 @@ class Utilisateur {
         this.motDePasse = motDePasse;
     }
     messageBienvenue() {
-        return `Bienvenue ${this.nom.value}!`;
+        return `Bienvenue ${this.nom}!`;
     }   
 }
-
-const utilisateur = new Utilisateur(identifiant, mdp);
 
 //Cree le bouton se connecter
 let btn = document.createElement('button');
@@ -26,7 +24,8 @@ document.querySelector('body').appendChild(btn);
 
 //Fonction qui verifie si il y a des champs manquant + setTimeout de 2 secondes
 function connexion() {
-    if (utilisateur.nom.value.length == 0 || utilisateur.motDePasse.value.length == 0) {
+    const utilisateur = new Utilisateur(identifiant.value, mdp);
+    if (utilisateur.nom.length == 0 || utilisateur.motDePasse.length == 0) {
         alert('Remplissez les champs manquants');
     } else {
         document.querySelector('p').textContent = utilisateur.messageBienvenue();

@@ -1,0 +1,13 @@
+{
+    "utilisateurs": [
+        {"login": "randomizedraptor", 
+        "password": "cacamoisi2727", 
+        "nom": "Mouhajer", 
+        "prenom": "Ihab"},
+        {"login": 
+        "goofball", 
+        "password": "ilovemusic",
+        "nom": "Rousseau",
+        "prenom": "Justine"}
+    ]
+}

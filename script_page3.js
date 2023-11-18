@@ -115,20 +115,6 @@ function prochaineQuestion() {
     questionSauces.afficherTitre();
     questionActuelle = 4;
   } else if (questionActuelle === 4) {
-    /*        const reponsesUtilisateur = [];
-        const inputs = form.elements;
-
-        for (let i = 0; i < inputs.length; i++) {
-            const input = inputs[i];
-            if (input.type === 'checkbox' && input.checked) {
-                reponsesUtilisateur.push(input.id);
-            } else if (input.type === 'radio' && input.checked) {
-                reponsesUtilisateur.push(input.id);
-            }
-        }
-
-        sauvegarderReponses(reponsesUtilisateur);
-*/
     window.open("./page4.html", "_self");
   }
 }

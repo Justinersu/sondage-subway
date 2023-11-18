@@ -82,9 +82,10 @@ function afficherQuestion(element) {
     //Defini le type d'input selon si c'est un choix multiple
     if (element.choixMultiples) {
       input.setAttribute("type", "checkbox");
+      input.setAttribute("name", element.titre);
     } else {
       input.setAttribute("type", "radio");
-      input.setAttribute("name", "choix");
+      input.setAttribute("name", element.titre);
     }
     label.appendChild(input);
     label.appendChild(titreChoix);
@@ -92,8 +93,51 @@ function afficherQuestion(element) {
   }
 }
 
+/*---------------LOCAL STORAGE----------------*/
+//Récupérer le login de l'utilisateur
+const utilisateurId = sessionStorage.getItem("login");
+
+//Récupérer les réponses existantes du localStorage
+const reponsesExistantes =
+  JSON.parse(localStorage.getItem("reponsesUtilisateur")) || {};
+
+//fonction pour sauvegarder les réponses de l'utilisateur dans localStorage
+function sauvegarderReponses(reponses) {
+  //Combiner les nouvelles réponses à ceux existantes
+  reponsesExistantes[utilisateurId] = reponsesExistantes[utilisateurId] || [];
+
+  //Push les nouvelles réponses à ceux existantes
+  for (let i = 0; i < reponses.length; i++) {
+    reponsesExistantes[utilisateurId].push(reponses[i]);
+  }
+
+  //Sauvegarder les réponses au localstorage
+  localStorage.setItem(
+    "reponsesUtilisateur",
+    JSON.stringify(reponsesExistantes)
+  );
+}
+/*--------------------------------------------*/
+
 //Fonction qui passe a la prochaine question
 function prochaineQuestion() {
+  //Creer tableau vide qui stock les reponses de l'utilisateur
+  const reponsesSelectionnees = [];
+
+  // Récupérer les réponses sélectionnées
+  const inputs = document.querySelectorAll(
+    'input[type="checkbox"]:checked, input[type="radio"]:checked'
+  );
+  inputs.forEach((input) => {
+    reponsesSelectionnees.push({
+      question: input.name,
+      reponse: input.id,
+    });
+  });
+
+  // Ajouter les réponses au stockage local
+  sauvegarderReponses(reponsesSelectionnees);
+
   while (form.firstChild) {
     form.removeChild(form.firstChild);
   }

@@ -1,15 +1,3 @@
-//Menu connexion avec sessionStorage
-const nom = document.querySelector(".nom");
-const login = document.querySelector(".login");
-nom.innerText =
-  sessionStorage.getItem("prenom") + " " + sessionStorage.getItem("nom");
-login.innerText = sessionStorage.getItem("login");
-
-// Stocke les pages visitées pendant la session
-let pagesVisitees = sessionStorage.getItem("pagesVisitees") || "";
-pagesVisitees += window.location.pathname + " ";
-sessionStorage.setItem("pagesVisitees", pagesVisitees);
-
 // Vérifie si l'utilisateur est déjà connecté
 function verifierUtilisateur() {
   const nomUtilisateur = sessionStorage.getItem("nom");
@@ -24,6 +12,18 @@ function verifierUtilisateur() {
     window.open("./page1.html", "_self");
   }
 }
+
+//Menu connexion avec sessionStorage
+const nom = document.querySelector(".nom");
+const login = document.querySelector(".login");
+nom.innerText =
+  sessionStorage.getItem("prenom") + " " + sessionStorage.getItem("nom");
+login.innerText = sessionStorage.getItem("login");
+
+// Stocke les pages visitées pendant la session
+let pagesVisitees = sessionStorage.getItem("pagesVisitees") || "";
+pagesVisitees += window.location.pathname + " ";
+sessionStorage.setItem("pagesVisitees", pagesVisitees);
 
 //Creer bouton de deconnexion
 let btnDeconnexion = document.createElement("button");

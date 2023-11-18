@@ -1,5 +1,5 @@
 {
-  "reponse1": [
+  "utlisateur1": [
     { "question": "pains", "reponse": "Italien" },
     { "question": "proteines", "reponse": "Thon" },
     { "question": "fromages", "reponse": "Cheddar" },
@@ -9,11 +9,13 @@
     },
     { "question": "sauces", "reponse": "Chipotle sud-ouest" }
   ],
-  "reponse2": [
+  "utilisateur2": [
     { "question": "pains", "reponse": "Fines herbes et fromage" },
     { "question": "proteines", "reponse": "Poulet" },
     { "question": "fromages", "reponse": "Habanero Jack" },
-    { "question": "legumes", "reponse": ["Laitue", "Épinards", "Concombres"] },
+    { 
+      "question": "legumes", 
+      "reponse": ["Laitue", "Épinards", "Concombres"] },
     {
       "question": "sauces",
       "reponse": ["Chipotle sud-ouest", "Siracha crémeuse"]

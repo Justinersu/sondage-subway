@@ -55,7 +55,7 @@ function verifierConnexion() {
           "p"
         ).textContent = `Bienvenue ${utilisateurTrouve.prenom} ${utilisateurTrouve.nom}!`;
 
-        // Redirige vers la page2.html
+        // Redirige vers la infos.html
         setTimeout(() => {
           window.open("./infos.html", "_self");
         }, 2000);

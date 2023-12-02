@@ -43,7 +43,7 @@ const form = document.querySelector(".choix");
 const button = document.querySelector("#soumettre");
 const h2 = document.querySelector("h2");
 
-//questionActuelle = 0
+//Initialiser la questionActuelle à 0
 let questionActuelle = 0;
 
 //Creer la classe Question et la sous-classe ChoixMultiples
@@ -71,7 +71,7 @@ const questionFromages = new Question("fromages", fromages);
 const questionLegumes = new ChoixMultiples("legumes", legumes);
 const questionSauces = new ChoixMultiples("sauces", sauces);
 
-//Fonction normale qui ajouter les enfants du form
+//Fonction qui ajouter les enfants du form
 function afficherQuestion(element) {
   for (const choix of element.options) {
     const label = document.createElement("label");

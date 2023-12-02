@@ -9,7 +9,7 @@ function verifierUtilisateur() {
     }
   } else {
     //L'utilisateur n'est pas connecté, redirige vers l'écran de connexion
-    window.open("./page1.html", "_self");
+    window.open("./index.html", "_self");
   }
 }
 
@@ -39,7 +39,7 @@ function deconnexion() {
   sessionStorage.clear();
 
   //Redirige vers la page de connexion
-  window.open("./page1.html", "_self");
+  window.open("./index.html", "_self");
 }
 
 //Vérifie la connexion lors du chargement de la page

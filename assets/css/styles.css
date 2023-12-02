@@ -1,0 +1,176 @@
+@font-face {
+  font-family: "Subway";
+  src: url("../fonts/SubwaySansLCG-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  font-family: "Subway";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+label,
+#nom,
+#mdp,
+button {
+  font-size: 20px;
+  font-weight: 200px;
+  margin: 8px;
+  text-transform: uppercase;
+}
+
+label {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+}
+
+h2 {
+  margin-bottom: 25px;
+}
+
+input {
+  margin: 10px;
+}
+
+.labelPage1 {
+  display: inline;
+  float: left;
+  width: 200px;
+  text-align: right;
+}
+
+.choix {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: space-around;
+  height: 25%;
+  flex-wrap: wrap;
+}
+
+.choix label {
+  width: 100%;
+}
+
+#nom,
+#mdp {
+  text-transform: none;
+  padding: 5px;
+  display: inline;
+  float: left;
+}
+
+button {
+  font-family: "Subway";
+  font-weight: 900;
+  padding: 0.7em;
+  margin-top: 20px;
+  background-color: #049438;
+  color: #fcc40c;
+  border: none;
+  border-radius: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fcc40c;
+  color: #049438;
+}
+
+#retour {
+  margin: 25px;
+  position: absolute;
+  display: flex;
+  align-self: flex-start;
+  top: 0;
+  font-size: 16px;
+}
+
+.logo {
+  height: 90px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.logo.haut {
+  position: absolute;
+  display: flex;
+  top: 0;
+  margin-top: 25px;
+  height: 70px;
+}
+
+.bienvenue {
+  margin-bottom: 30px;
+  font-weight: 100;
+  font-size: 42px;
+  animation: fadeIn 3s;
+}
+
+.info {
+  width: 800px;
+  height: 200px;
+  font-size: 22px;
+  animation: fadeIn 6s;
+}
+
+.message {
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.utilisateur {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  text-align: center;
+}
+
+.profile_pic img {
+  width: 50px;
+}
+
+.utilisateur div {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  margin-right: 0.5rem;
+}
+
+#btn-deconnexion {
+  position: absolute;
+  top: 65px;
+  right: 25px;
+  font-size: 16px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.statistiques {
+  height: 200px;
+  font-size: 22px;
+  animation: fadeIn 6s;
+  display: flex;
+  flex-direction: row; 
+  text-align: left;
+}
+
+.statistiques div {
+  margin: 0 30px 0 30px;
+}

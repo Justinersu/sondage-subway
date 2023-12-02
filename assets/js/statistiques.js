@@ -9,7 +9,7 @@ function formaterStatistiques(statistique) {
 
 function afficherStatistiques() {
   // Charger les réponses du fichier JSON
-  fetch("reponses_sondage.json")
+  fetch("./assets/data/reponses_sondage.json")
     .then((response) => response.json())
     .then((reponsesSondage) => {
       // Récupérer les réponses du localStorage

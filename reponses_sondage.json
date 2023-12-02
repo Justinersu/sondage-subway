@@ -3,22 +3,20 @@
     { "question": "pains", "reponse": "Italien" },
     { "question": "proteines", "reponse": "Thon" },
     { "question": "fromages", "reponse": "Cheddar" },
-    {
-      "question": "legumes",
-      "reponse": ["Laitue", "Épinards", "Concombres", "Poivrons verts"]
-    },
+    { "question": "legumes", "reponse": "Laitue" },
+    { "question": "legumes", "reponse": "Épinards" },
+    { "question": "legumes", "reponse": "Concombres" },
+    { "question": "legumes", "reponse": "Poivrons verts" },
     { "question": "sauces", "reponse": "Chipotle sud-ouest" }
   ],
   "utilisateur2": [
     { "question": "pains", "reponse": "Fines herbes et fromage" },
     { "question": "proteines", "reponse": "Poulet" },
     { "question": "fromages", "reponse": "Habanero Jack" },
-    { 
-      "question": "legumes", 
-      "reponse": ["Laitue", "Épinards", "Concombres"] },
-    {
-      "question": "sauces",
-      "reponse": ["Chipotle sud-ouest", "Siracha crémeuse"]
-    }
+    { "question": "legumes", "reponse": "Laitue" },
+    { "question": "legumes", "reponse": "Épinards" },
+    { "question": "legumes", "reponse": "Concombres" },
+    { "question": "sauce", "reponse": "Chipotle sud-ouest" },
+    { "question": "sauce", "reponse": "Siracha crémeuse" }
   ]
 }
